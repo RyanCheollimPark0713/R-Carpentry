@@ -69,12 +69,13 @@ more_respondent_wall_type
 no_of_members[c(TRUE, FALSE, TRUE, FALSE)]
 no_of_members > 5
 no_of_members[no_of_members > 5]
+no_of_members[no_of_members < 3 | no_of_members >5]
+no_of_members[no_of_members >= 7 & no_of_members == 3]
 
-
-
-
-
-
+possessions
+possessions[possessions == "car" | possessions == "bicycle"]
+possessions %in% c("car", "bicycle")
+possessions[possessions %in% c("car", "bicycle")]
 
 
 
