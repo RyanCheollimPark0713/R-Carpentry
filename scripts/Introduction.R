@@ -16,6 +16,7 @@ width <- 3.2
 area <- length * width
 area
 
+# functions
 # b <- sqrt(x = a)
 
 round(3.14159)
@@ -56,5 +57,21 @@ tricky
 
 combined_logical <- c(num_logical, char_logical)
 combined_logical
+
+# subseting
+
+respondent_wall_type[2]
+respondent_wall_type[c(3, 2)]
+
+more_respondent_wall_type <- respondent_wall_type[c(1,2,3,2,1,3)]
+more_respondent_wall_type
+
+
+
+
+
+
+
+
 
 
