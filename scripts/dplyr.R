@@ -20,6 +20,28 @@ interviews %>%
   select(affect_conflicts, liv_count, no_meals) -> memb_assoc_data
 
 
+Interviews_ppl_room <- interviews %>%
+  filter(memb_assoc == "yes") %>%
+  mutate(people_per_room = no_membrs / rooms)     # create a new column
+
+Total_meals <- interviews %>%
+  mutate(total_meals = no_membrs * rooms) %>%
+  filter(total_meals > 5) %>%
+  select(village, total_meals)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
