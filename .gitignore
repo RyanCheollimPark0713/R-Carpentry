@@ -26,3 +26,4 @@ vignettes/*.pdf
 rsconnect/
 data/*.csv
 data/*.xlsx
+data/*.rds
