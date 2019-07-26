@@ -98,11 +98,30 @@ summary(year_fct)
 
 
 
+affect_conflicts <- interviews[9]
+affect_conflicts <- interviews$affect_conflicts
+affect_conflicts <- as.factor(affect_conflicts)
+plot(affect_conflicts)
+
+affect_conflicts <- interviews$affect_conflicts
+affect_conflicts[is.na(affect_conflicts)] <- "undetermined"
+affect_conflicts <- as.factor(affect_conflicts)
+plot(affect_conflicts)
 
 
+# Exercise
+
+levels(affect_conflicts)[2] <- "more than once"
+summary(affect_conflicts)
 
 
-
+affect_conflicts <- interviews$affect_conflicts
+affect_conflicts[is.na(affect_conflicts)] <- "undetermined"
+affect_conflicts[affect_conflicts == "more_once"] <- "more than once"
+affect_conflicts <- as.factor(affect_conflicts) 
+affect_conflicts <- factor(affect_conflicts, 
+                           levels = c("once", "frequently", "more than once", "never", "undetermined"))     # reordering
+plot(affect_conflicts)
 
 
 
